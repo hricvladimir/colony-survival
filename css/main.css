@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-grey-1: #3f3f3f;
+    --clr-grey-5: #9c9999;
+    --clr-grey-10: #e4e4e4;
+    --clr-grey-1-tr: #3f3f3faa;
+    --clr-grey-5-tr: #9c9999aa;
+    --clr-grey-10-tr: #e4e4e4aa;
+    --clr-brown-1: #1A130F;
+    --transition: all 0.3s linear;
+}
+
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.body-move {
+    position: relative;
+    right: 50vw;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--clr-grey-5);
+    background: transparent;
+    border: 3px solid var(--clr-grey-5);
+    padding: 0.5rem;
+    transition: var(--transition);
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    border: 3px solid var(--clr-grey-10);
+    background: var(--clr-grey-5-tr);
+    color: var(--clr-grey-10);
+}
+
+/* ----------------------- */
+
+.bodyMoveLeft {
+    transform: translateX(-50vw);
+}
+
+.nav {
+    position: relative;
+    width: 100vw;
+    background: var(--clr-grey-1-tr);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    animation: nav-appear 2s 0.5s forwards;
+}
+
+@keyframes nav-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-5vw);
+    }
+    100% {opacity: 1;}
+}
+
+.nav .logo {
+    transition: var(--transition);
+    display: inline-block;
+    color: var(--clr-grey-10);
+    margin: 0.75rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-weight: 600;
+}
+
+.nav .logo:hover {
+    cursor: pointer;
+    color: var(--clr-grey-5);
+}
+
+.moveLogoLeft {
+    transform: translateX(-120%);
+}
+
+.navbar {
+    top: 0;
+    position: fixed;
+    transform: translateX(100vw);
+    height: 100vh;
+    width: 50vw;
+    background: var(--clr-brown-1);
+    color: white;
+    padding: 1rem 2rem;
+    transition: var(--transition);
+}
+
+.showNav {
+    transform: translateX(50vw);
+}
+
+.nav-close {
+    font-size: 3rem;
+    position: fixed;
+    top: 1%;
+    left: 75%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-close::after{
+    display: inline-block;
+    content: "\00d7"; /* This will render the 'X' */
+}
+
+.nav-close:hover {
+    color: var(--clr-grey-5);
+}
+
+.navbar {
+    padding-top: 1.5rem;
+}
+
+.navbar h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.navbar h3:hover {
+    cursor: pointer;
+    color: var(--clr-grey-1);
+    background: var(--clr-grey-10);
+}
+
+.navbar ul {
+    margin: 1.5rem 0;
+
+}
+.navbar li {
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.navbar li:hover {
+    color: var(--clr-grey-5);
+}
+
+.toggle-menu-button {
+    position: absolute;
+    transition: var(--transition);
+    right: 3rem;
+    top: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.toggle-menu-button:hover {
+    cursor: pointer;
+}
+
+.toggle-menu-button:focus .top{
+    background:var(--clr-grey-1);
+}
+
+.toggle-menu-button:hover .top {
+    background: var(--clr-grey-5);
+}
+
+.toggle-menu-button:hover .middle {
+    background: var(--clr-grey-5);
+}
+
+.toggle-menu-button:hover .bottom {
+    background: var(--clr-grey-5);
+}
+
+.top,.middle,.bottom {
+    background: white;
+    transition: var(--transition);
+    margin-bottom: 4px;
+    width: 22px;
+    height: 2px;
+}
+
+.header {
+    height: 70vh;
+    position: relative;
+    top:0;
+    background: linear-gradient(rgba(32,26,22,0.7), rgba(32,26,22,0.7)), url("../images/hero-bg.jpg") center/cover no-repeat fixed;
+    overflow-x: hidden;
+}
+
+.under-hero {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 70vh;
+    background: var(--clr-brown-1);
+    z-index: 0;
+    animation: hero-appear 1s 0.5s forwards;
+}
+
+@keyframes hero-appear {
+    0% {background: #1a130f;}
+    100% {background: #1a130f00;}
+}
+
+.hero {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    animation: hero-text-appear 2s forwards;
+}
+
+@keyframes hero-text-appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+    
+}
+
+.hero h3,
+.navbar h3 {
+    color: var(--clr-grey-5);
+    font-weight: 300;
+    margin-bottom: 0.25rem;
+}
+
+.hero h2 {
+    color: var(--clr-grey-10);
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+}
+
+.temp {
+    height: 200vh;
+}
