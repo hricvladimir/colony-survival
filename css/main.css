@@ -178,7 +178,7 @@ li {
 .toggle-menu-button {
     position: absolute;
     transition: var(--transition);
-    right: 3rem;
+    right: 1rem;
     top: 1rem;
     display: inline-block;
     vertical-align: middle;
