@@ -393,6 +393,8 @@ footer {
 
 .footer-wrapper {
     padding: 2rem 0;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .footer-wrapper h4 {
