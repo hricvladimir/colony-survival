@@ -232,7 +232,10 @@ li {
 
 @keyframes hero-appear {
     0% {background: #1a130f;}
-    100% {background: #1a130f00;}
+    100% {
+        background: #1a130f00;
+        display: none;
+    }
 }
 
 .hero {
@@ -253,6 +256,7 @@ li {
     100% {
         opacity: 1;
         top: 50%;
+        z-index: 5;
     }
     
 }
