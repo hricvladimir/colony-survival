@@ -360,6 +360,7 @@ li {
     transition: var(--transition);
     border-radius: 25%;
     margin: 0 0.2rem;
+    color: black;
 }
 
 .social-media-wrapper i:hover {
@@ -398,14 +399,26 @@ footer {
     text-transform: capitalize;
     margin-bottom: 0.5rem;
     letter-spacing: 0.125rem;
+    color: var(--clr-grey-5);
+    transition: var(--transition);
+}
+
+.footer-wrapper h4:hover {
+    color: var(--clr-grey-10);
 }
 
 .footer-wrapper a {
     color: var(--clr-grey-10);
+    transition: var(--transition);
 }
 
 .footer-wrapper p {
     margin-top: 1rem;
+}
+
+.footer-wrapper p a:hover {
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
 }
 
 .footer-wrapper .copy {
