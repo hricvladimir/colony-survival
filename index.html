@@ -18,7 +18,18 @@
     <!-- navbar -->
     <nav class="nav">
       <!-- logo -->
-      <div class="logo" id="logo">colony survival</div>
+      <div class="logo" id="logo"><a href="./index.html">colony survival</a></div>
+      <!-- header nav menu (for PC screens) -->
+      <div class="navbar-pc">
+        <div class="navbar-pc-content">
+          <ul>
+            <li><a href="./temp.html">roadmap</a></li>
+            <li><a href="./temp.html">press kit</a></li>
+            <li><a href="./temp.html">blog</a></li>
+            <a href="#" class="btn nav-btn-us" target="_blank">PIPLIZ</a>
+          </ul>
+          
+      </div>
       <!-- toggle button -->
       <div class="toggle-menu-button" id="toggle-menu-button">
         <div class="top"></div>
@@ -28,18 +39,18 @@
       <div class="navbar" id="navbar">
         <div class="navbar-content">
           <div class="nav-close" id="nav-close"></div>
-          <h3>colony survival</h3>
+          <h3><a href="./index.html">colony survival</a></h3>
           <ul>
-            <li>roadmap</li>
-            <li>press kit</li>
-            <li>blog</li>
+            <li><a href="./temp.html">roadmap</a></li>
+            <li><a href="./temp.html">press kit</a></li>
+            <li><a href="./temp.html">blog</a></li>
           </ul>
           <a href="#" class="btn nav-btn-us" target="_blank">PIPLIZ</a>
         </div>
       </div>
     </nav>
     <!-- header -->
-    <header class="header">
+    <header class="header" id="header">
       <!-- hero -->
       <div class="hero">
         <h3>the first person voxel rts</h3>
@@ -75,8 +86,8 @@
           </article>
           <!-- end of article with no image -->
           <!-- pathfinding -->
-          <article class="pathfinding">
-            <div class="pathfinding-wrapper">
+          <article class="image-article pathfinding">
+            <div class="float pathfinding-wrapper">
               <img src="./images/pathfinding.jpg" alt="pathfinding-img" />
               <h4>pathfinding</h4>
               <p>
@@ -86,8 +97,8 @@
               </p>
             </div>
           </article>
-          <article class="no-limits">
-            <div class="no-limits-wrapper">
+          <article class="image-article no-limits">
+            <div class="float no-limits-wrapper">
               <img src="./images/no-limits.jpeg" alt="no-limits-img" />
               <h4>no limits</h4>
               <p>
@@ -97,8 +108,8 @@
               </p>
             </div>
           </article>
-          <article class="development">
-            <div class="development-wrapper">
+          <article class="image-article development">
+            <div class="float development-wrapper">
               <img
                 src="./images/influence-dev.jpg"
                 alt="influence-development-img"
@@ -141,6 +152,9 @@
             Click <a href="https://colonysurvival.nl/#">HERE</a> to visit the
             original webpage
           </p>
+
+          <div class="back-to-top" id="back-to-top">BACK TO THE TOP</div>
+
           <p class="copy">Gody_&copy | 2022 | All Rights Reserved</p>
         </div>
       </footer>
@@ -149,3 +163,10 @@
     <script src="app.js"></script>
   </body>
 </html>
+
+<!-- 
+  TODO:
+    - when hovering icon div, make icons lighter
+    - add responsivness
+    - when on bigger screen, image effects
+ -->

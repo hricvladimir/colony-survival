@@ -38,6 +38,12 @@ h2 {
 
 a {
     text-decoration: none;
+    color: var(--clr-grey-10);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--clr-grey-5);
 }
 
 li {
@@ -288,6 +294,29 @@ li {
     margin-bottom: 1.2rem;
 }
 
+@media screen and (min-width:641px) {
+
+    .hero h3 {
+        font-size: 2rem;
+    }
+    .hero h2 {
+        font-size: 4.5rem;
+        letter-spacing: 0.1rem
+    }
+
+    .hero a {
+        font-size: 1.5rem;
+    }
+
+    .nav .logo {
+        font-size: 2rem;
+    }
+
+    .toggle-menu-button {
+        top: 1.5rem;
+    }
+}
+
 /* main content */
 /* section */
 
@@ -428,3 +457,97 @@ footer {
     margin-top: 2rem;
 }
 
+.navbar-pc-content {
+    display: none;
+}
+
+.back-to-top {
+    cursor: pointer;
+    color: var(--clr-grey-10);
+    margin-top: 1rem;
+}
+
+.navbar-pc-content a,
+.navbar-content ul a {
+    color: white;
+    transition: var(--transition);
+}
+
+.navbar-pc-content a:hover,
+.navbar-content ul a:hover {
+    color: var(--clr-grey-5);
+}
+
+.content {
+    background: var(--clr-grey-5);
+}
+
+.temporary-content {
+    width: 90%;
+    margin: 0 auto;
+    background: var(--clr-grey-5);
+    height: 50vh;
+}
+
+@media screen and (min-width:804px) {
+    .toggle-menu-button {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .moveLogoLeft {
+        transform: translateX(0%);
+    }
+
+    .logo {
+        float: left;
+    }
+    
+    .navbar-pc-content li{
+        color: var(--clr-grey-10);
+        display: inline-block;
+        margin-right: 1rem;
+        margin-top: 1.5rem;
+        transition: var(--transition);
+        text-transform: uppercase;
+    }
+
+    .navbar-pc-content li:hover {
+        color: var(--clr-grey-5);
+        cursor: pointer;
+    }
+
+    .navbar-pc-content {
+        display: inline;
+        float: right;
+        text-align: right;
+        margin-right: 6rem;
+    }
+
+    /* tiles float */
+    .float {
+        width: 33.33%;
+        float: left;
+        padding-right: 4rem;
+        margin-bottom: 2rem;
+        transition: var(--transition);
+    }
+
+    .float img:hover {
+        scale: 1.2;
+        box-shadow: 8px 8px 6px var(--clr-grey-1);
+    }
+    
+    
+}
+
+
+
+/* 
+screen breakpoints main page
+    641 bigger text
+    768 columns
+ */
